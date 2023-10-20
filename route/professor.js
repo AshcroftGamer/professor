@@ -82,7 +82,7 @@ router.post( '/', ( req, res, next ) => {
 } );
 
 // atualiza um professor
-router.patch( '/', ( req, res, next ) => {
+router.patch( '/:id', ( req, res, next ) => {
     //const id = req.params.id_prof;
     mysql.getConnection( ( error, conn ) => {
         if ( error )
@@ -93,7 +93,7 @@ router.patch( '/', ( req, res, next ) => {
             [
                 req.body.nome,  
                 req.body.senha, 
-                req.body.id_prof
+                req.params.id
             ],
             ( error, resultado, field ) => {
                 conn.release();
@@ -115,9 +115,26 @@ router.patch( '/', ( req, res, next ) => {
 //deleta um professor
 router.delete( '/:id_prof', ( req, res, next ) => {
     const id = req.params.id_prof;
-    res.status( 201 ).send( {
-        mensagem: 'Usando o delete na rota professor'
+    mysql.getConnection( ( error, conn ) => {
+        if ( error )
+            return res.status( 500 ).send( { error: error } );
+        conn.query(
+            'delete from professor where id = ?;',
+            [
+                req.params.id_prof
+            ],
+            ( error, results, fields ) => {
+                //conn.release();
+                if ( error ) { return res.status( 400 ).send( { erro: error } ); }
+
+                res.status( 200 ).send( {
+                    Professor: results
+                } );
+
+            }
+        )
     } )
+
 } );
 
 module.exports = router;
