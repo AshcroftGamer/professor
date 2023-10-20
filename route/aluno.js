@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const mysql = require('../mysql').pool;
 
 
 
@@ -12,8 +13,18 @@ router.get('/', (req, res, next) => {
 
 //cadastra um aluno
 router.post('/', (req, res, next) => {
+    const aluno = {
+        nome: req.body.nome,
+        idade: req.body.idade
+    }
+    // mysql.getConnection((error, conn)=>{
+    //     conn.query(
+    //         'INSERT INTO alunos(id, nome, )'
+    //     )
+    // })
     res.status(200).send({
-        mensagem: 'Usando o post na rota aluno'
+        mensagem: 'Aluno cadastrado',
+        alunoCriado: aluno
     })
 });
 
@@ -24,6 +35,7 @@ router.patch('/:id_aluno', (req, res, next) => {
         mensagem: 'Usando o patch na rota aluno'
     })
 });
+
 
 //deleta um aluno
 router.delete('/:id_aluno', (req, res, next) => {
