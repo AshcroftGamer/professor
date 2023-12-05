@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professor</title>
     <script src="https://kit.fontawesome.com/6bda3a8a9b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="js/script.js"></script>
 
 
@@ -15,95 +15,111 @@
 <body>
 
 
-    <section class="row-10">
+
+    <div class="row-1 container">
 
 
-        <div class="col-6">
-            <div class="column  is-half">
-                <img class="" src="img/logo.png" alt="">
+        <div class="col-6 ">
+            <header>
+                <div class="row-10">
+                    <img src="../img/logo.png" alt="">
 
-                <h2>Crie sua conta, é grátis!</h2>
-
-                <div class="col-10">
-                    <input class="input row-10" type="text" placeholder="Nome">
-                    <input class="input row-10" type="text" placeholder="Matéria">
                 </div>
+            </header>
+            <div style="margin: 25px;"> </div>
+            <span style="font-family:'Plus Jakarta Sans', sans-serif; font-weight: 600;">Crie sua conta, é
+                grátis!</span>
+            <div style="margin: 25px;"> </div>
+            <div class="col-10">
+                <!-- <form action="">
+                    <label for="fname">Nome</label>
+                    <input type="text" id="fname" name="fname">
+                    <label for="fmateria">Matéria</label><br>
+                    <input type="text" id="fname" name="fname">
+                </form> -->
+                <input class="row-1 input" type="text" placeholder="Nome">
+                <div style=" margin: 12px;"></div>
 
-               <div class="buttons">
-                <button class="button is-warning" >Buscar</button>
-                <button class="button is-warning">Novo</button>
-                <button class="button is-warning">Atualizar</button>
-                <button class="button is-warning">Excluir</button>
-               </div>
-
-
+                <input class="row-1 input" type="text" placeholder="Matéria">
             </div>
+            <div style=" margin: 21px;"></div>
 
-
-
-
-
+            <div class="buttons"><br>
+                <button class="">Buscar</button>
+                <button class="">Novo</button>
+                <button class="">Atualizar</button>
+                <button class="">Excluir</button>
+            </div>
+            <div class="mbb"></div>
+            <div class="cad-aluno">
+                <span>Lista de Alunos</span>
+                <button>NOVO ALUNO</button>
+            </div>
 
         </div>
         <div class="col-4">
-            <figure class="image"><img src="img/Rectangle 55.png" alt=""></figure>
+            <img src="../img/Rectangle 55.png" alt="">
         </div>
 
 
-    </section>
-    <section class="section">
-        <div class="column ">
-            <h2 class="title is-half">Lista de Alunos</h2>
-            <button class="">NOVO ALUNO</button>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Idade</th>
-                        <th>Série</th>
-                        <th>B1</th>
-                        <th>B2</th>
-                        <th>B3</th>
-                        <th>B4</th>
-                        <th>Média</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Idade</th>
-                        <th>Série</th>
-                        <th>B1</th>
-                        <th>B2</th>
-                        <th>B3</th>
-                        <th>B4</th>
-                        <th>Média</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <tr>
-                        <th>João</th>
-                        <td>12</td>
-                        <td>1° ano</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>6,5</td>
-                        <div class="buttons">
-                            <td><button type="button is-primary">Editar</button></td>
-                        <td><button type="button is-info">Editar Notas</button></td>
-                        <td><button type="button is-danger">Excluir</button></td>
-                        </div>
-                    </tr>
-                </tbody>
+    </div>
+
+    <div class="row-1 contain">
+
+        <table class="table cow-12">
+            <thead>
+                <tr>
+                    <th colspan="1" >Nome</th>
+                    <th>Idade</th>
+                    <th>Série</th>
+                    <th>B1</th>
+                    <th>B2</th>
+                    <th>B3</th>
+                    <th>B4</th>
+                    <th>Média</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>João Cooper</td>
+                    <td>12</td>
+                    <td>1° ano</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>6,5</td>
+                    <td><button class="btn-edit" onclick="ok()" type="">Editar</button></td>
+                    <td><button class="btn-editn" type="">Editar Notas</button></td>
+                    <td><button class="btn-delete" type="">Excluir</button></td>
+                </tr>
+            </tbody>
+            <!-- <tfoot>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Série</th>
+                    <th>B1</th>
+                    <th>B2</th>
+                    <th>B3</th>
+                    <th>B4</th>
+                    <th>Média</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tfoot> -->
 
 
 
-            </table>
-        </div>
+        </table>
+    </div>
 
-    </section>
+
 
 
 

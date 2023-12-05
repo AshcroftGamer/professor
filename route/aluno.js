@@ -6,9 +6,22 @@ const mysql = require('../mysql').pool;
 
 //retorna todos os alunos
 router.get('/', (req, res, next) => {
-    res.status(200).send({
-        mensagem: 'Usando o get 1 na rota aluno'
-    })
+    mysql.getConnection( ( error, conn ) => {
+        if ( error )
+            return res.status( 500 ).send( { error: error } );
+        conn.query(
+            'Select * from alunos;',
+            ( error, results, fields ) => {
+                //conn.release();
+                if ( error ) { return res.status( 400 ).send( { ok: error } ); }
+
+                res.status( 200 ).send( {
+                    aluno: results
+                } );
+
+            }
+        )
+    } )
 });
 
 //cadastra um aluno

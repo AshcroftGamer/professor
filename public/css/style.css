@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Plus Jakarta Sans', sans-serif;*/
+/*font-family: 'Inter', sans-serif;*/
+/*font-family: 'Poppins', sans-serif;*/
 
-@media (min-width: 600px) {
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+body{
+    margin: 0;
+    padding: 0
+    ;
+}
+@media (min-width: 1366px) {
     @font-face {
         font-family: 'bebas_neueregular';
         src: url('font/bebasneue-regular-webfont.woff2') format('woff2'), url('../font/bebasneue-regular-webfont.woff') format('woff');
@@ -108,4 +125,232 @@
     }
 }
 
+/*Menu*/
+header {
+    padding: 20px 0;
+}
 
+
+nav{
+    top: 110px;
+    right: 0;
+    margin-left: 20%;
+}
+
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    margin-right: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+/*Textos do site*/
+
+
+.txt-principal{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: #181e4b;
+}
+.txt-principal .um{
+    color: #F8A401;
+ }
+
+ .txt-principal .dois{
+    color: #63aaeb;
+ }
+.txt-secundario{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25.2px;
+}
+
+
+.txt-cta{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 23.33px;
+}
+
+/*Botões do sistema*/
+.btn-cadastro{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    height: 67px;
+    width: 176px;
+    border-radius: 7px;
+    border: none;
+    background-color: #4475f2;
+    color: white;
+}
+.btn-cadastro a{
+    color: white;
+    font-size: 16px;
+}
+.btn-login{
+    background-color: #FEE774;
+    border: none;
+    width: 120px;
+    height: 47px;
+    border-radius: 20px;
+}
+.btn-login a{
+    margin-left: 27px;
+}
+
+.buttons button{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    width: 130px;
+    height: 48px;
+    border-radius: 100px;
+    border: none;
+    background-color: #FEE774
+}
+
+ td button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    width: 108px;
+    height: 26px;
+    
+} 
+.btn-edit{
+    background-color: #16C09861;
+    border: 1px solid #00B087;
+    color: #00B087;
+    margin-left: 43px;
+}
+.btn-editn{
+    color: black;
+    background-color: #63AAEB;
+    border: 1px solid #4475f2;
+   
+} 
+.btn-delete{
+    color: black;
+    background-color: #9f1737;
+    border: 1px solid #f24444;
+    color: white;
+   
+} 
+
+/*Espaços vazios*/
+.contain{
+    width: 100%;
+    margin: -49px auto 0px auto;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    margin: 39px auto 0 auto;
+}
+
+.mg{
+    margin-top: 40px;
+}
+.mb{
+    margin-bottom: 95px;
+}
+.mbb{
+    margin-bottom: 90px;
+}
+.margin-l{
+    margin-left: 40px;
+}
+
+
+
+/* Imagens do sistema*/
+.img-bloco {
+    background-image: url(../img/Rectangle\ 54.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25pc;
+    height: 538px;
+    
+
+}
+
+.input{
+    width: 514px;
+    height: 48px;
+    border-radius: 6px;
+    border: 1px solid #D5D7DC;
+    padding-left: 14px;
+    font-size: 16px;
+}
+
+
+.cad-aluno{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+
+}
+
+.cad-aluno span{
+    font-family:'Plus Jakarta Sans', sans-serif; font-weight: 600;
+}
+.cad-aluno button{
+    width: 108px;
+    height: 32px;
+    border-radius: 66px;
+    border: none;
+    background-color: #00B087;
+    color: white;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/*Tabelas*/
+div .table{
+    width: 90%;
+}
+
+
+thead th{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -1%;
+    color: #B5B7C0;
+    width: 28px;
+}
+th:nth-child(1){
+    width: 15%;
+}
+
+th:nth-child(9), th:nth-child(10), th:nth-child(11){
+  /* background-color: red; */
+  width: 9%;
+}
+thead tr{
+    text-align: justify;
+}
+tbody td{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -1%;
+}
