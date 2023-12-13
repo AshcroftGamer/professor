@@ -233,7 +233,7 @@ nav a{
     background-color: #16C09861;
     border: 1px solid #00B087;
     color: #00B087;
-    margin-left: 43px;
+    /* margin-left: 43px; */
 }
 .btn-editn{
     color: black;
@@ -287,6 +287,12 @@ nav a{
 
 }
 
+label{
+    font-family: 'Inter', sans-serif;
+    /* color: #D5D7DC; */
+    border: none;
+}
+
 .input{
     width: 514px;
     height: 48px;
@@ -307,7 +313,8 @@ nav a{
 }
 
 .cad-aluno span{
-    font-family:'Plus Jakarta Sans', sans-serif; font-weight: 600;
+    font-family:'Plus Jakarta Sans', sans-serif; 
+    font-weight: 600;
 }
 .cad-aluno button{
     width: 108px;
@@ -322,7 +329,8 @@ nav a{
 
 
 /*Tabelas*/
-div .table{
+div table{
+    margin: auto;
     width: 90%;
 }
 

@@ -49,16 +49,16 @@ router.get( '/:id_prof', ( req, res, next ) => {
 } );
 
 //cadastra um professor
-router.post( '/', ( req, res, next ) => {
+router.post( '/cadastro', ( req, res, next ) => {
 
     mysql.getConnection( ( error, conn ) => {
         if ( error )
             return res.status( 400 ).send( { ok: error } );
 
         conn.query(
-            'INSERT INTO professor ( nome, email, senha, materia) values (?, ?, ?, ?);',
+            'INSERT INTO professor (  nome, email, senha, materia) values ( ?, ?, ?, ?);',
             [
-                req.body.nome, req.body.email, req.body.senha, req.body.materia
+                 req.body.nome, req.body.email, req.body.senha, req.body.materia
             ],
             ( error, resultado, field ) => {
                 conn.release();

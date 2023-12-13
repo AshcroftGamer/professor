@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professor</title>
-    <script src="https://kit.fontawesome.com/6bda3a8a9b.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/6bda3a8a9b.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="../css/style.css">
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 
 
 </head>
 
 <body>
+    <script src="../js/script.js"></script>
 
 
 
@@ -27,34 +28,48 @@
                 </div>
             </header>
             <div style="margin: 25px;"> </div>
-            <span style="font-family:'Plus Jakarta Sans', sans-serif; font-weight: 600;">Crie sua conta, é
+            <span style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; color: #666666;">Crie sua conta, é
                 grátis!</span>
             <div style="margin: 25px;"> </div>
             <div class="col-10">
-                <!-- <form action="">
-                    <label for="fname">Nome</label>
-                    <input type="text" id="fname" name="fname">
+                <form action="">
+                    <label for="fname">Nome</label><br>
+                    <input class="row-1 input" type="text" id="fname" name="fname"><br>
+                    <label for="fmail">E-mail</label><br>
+                    <input class="row-1 input" type="email" name="fmail" id="fmail"><br>
                     <label for="fmateria">Matéria</label><br>
-                    <input type="text" id="fname" name="fname">
-                </form> -->
-                <input class="row-1 input" type="text" placeholder="Nome">
+                    <input class="row-1 input" type="text" id="fmateria" name="fmateria"><br>
+                    <label for="fpassword">Senha</label><br>
+                    <input class="row-1 input" type="password" name="fpassword" id="fpassword"><br>
+                    <!-- <input type="submit" value="submit" > -->
+                </form>
+                <!-- <input class="row-1 input" type="text" id="nome" placeholder="Nome">
                 <div style=" margin: 12px;"></div>
 
-                <input class="row-1 input" type="text" placeholder="Matéria">
+                <input class="row-1 input" type="email" id="email" placeholder="E-mail">
+                <div style=" margin: 12px;"></div>
+
+                <input class="row-1 input" type="text" id="materia" placeholder="Matéria">
+                <div style=" margin: 12px;"></div> -->
+
+                <!-- <input class="row-1 input" type="password" id="senha" placeholder="Senha"> -->
             </div>
-            <div style=" margin: 21px;"></div>
+            <!-- <div style=" margin: 21px;"></div> -->
 
             <div class="buttons"><br>
                 <button class="">Buscar</button>
-                <button class="">Novo</button>
-                <button class="">Atualizar</button>
+                <button onclick="cadProfessor()" class="">Novo</button>
+                <button onclick="criarTr()" class="">Atualizar</button>
                 <button class="">Excluir</button>
             </div>
-            <div class="mbb"></div>
+            <!-- <div class="mbb"></div> -->
+            <div style=" margin: 21px;"></div>
             <div class="cad-aluno">
                 <span>Lista de Alunos</span>
                 <button>NOVO ALUNO</button>
             </div>
+            <!-- <div style=" margin: 42px;"></div> -->
+            <!-- <div style=" margin: 21px;"></div> -->
 
         </div>
         <div class="col-4">
@@ -63,14 +78,16 @@
 
 
     </div>
+    <div style=" margin: 4%;"></div>
 
     <div class="row-1 contain">
 
-        <table class="table cow-12">
+        <div class="col-12 " id="tabela" onload="criarTr()"></div>
+        <!-- <table class="table cow-12">
             <thead>
                 <tr>
                     <th colspan="1" >Nome</th>
-                    <th>Idade</th>
+                    <th >Idade</th>
                     <th>Série</th>
                     <th>B1</th>
                     <th>B2</th>
@@ -98,6 +115,7 @@
                     <td><button class="btn-delete" type="">Excluir</button></td>
                 </tr>
             </tbody>
+        </table> -->
             <!-- <tfoot>
                 <tr>
                     <th>Nome</th>
@@ -115,8 +133,38 @@
             </tfoot> -->
 
 
+            <!-- <div class="col-12 contain">
+                <div id="head" class="row-1 table" style="background-color: red; height: 25px;">
+                    <span>nome</span>
+                    <span>Idade</span>
+                    <span>Série</span>
+                    <span>B1</span>
+                    <span>B2</span>
+                    <span>B3</span>
+                    <span>Média</span>
+        
+                    <button class="btn-edit" onclick="ok()" type="">Editar</button>
+                    <button class="btn-editn" type="">Editar Notas</button>
+                    <button class="btn-delete" type="">Excluir</button>
+                </div><br>
+                
+                <div id="body" class="row-1" >
+                    <span>nome</span>
+                    <span>Idade</span>
+                    <span>Série</span>
+                    <span>B1</span>
+                    <span>B2</span>
+                    <span>B3</span>
+                    <span>Média</span>
+        
+                    <button class="btn-edit" onclick="ok()" type="">Editar</button>
+                    <button class="btn-editn" type="">Editar Notas</button>
+                    <button class="btn-delete" type="">Excluir</button>
+                </div> -->
 
-        </table>
+
+
+       
     </div>
 
 
